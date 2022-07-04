@@ -18,19 +18,19 @@ export const LoginLeftPannel=()=>{
     const payload:any=[ 
         {
         image:blank00,
-        title:'banana'
+        title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
     },
     {
         image:blank01,
-        title:'melao'
+        title:'Sed ut perspiciatis unde omnis iste natus error '
     },
     {
         image:blank02,
-        title:'melancia'
+        title:'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis'
     },
     {
         image:blank03,
-        title:'Maçã'
+        title:'Temporibus autem quibusdam et aut officiis debitis'
     }
     
 ]

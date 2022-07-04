@@ -1,5 +1,9 @@
 import React,{useState} from 'react'
 
+import { SingIn } from '../SingIn'
+import { SingUp } from '../SignUp'
+
+
 import * as S from './LoginRightPannel.styled'
 
 import { RoundButton } from '../../componets/RoundButton'
@@ -26,11 +30,14 @@ export const LoginRightPannel=()=>{
                 </div>
               </S.MenuButtonsContainer>
             </S.HeaderPannel>
-            <S.BodyPannel>
-            <S.MenuPannel onClick={()=>clickHandler('signin')} active={clickMenu==='signin'||false}>Sign In</S.MenuPannel>
-                <span>or</span>
+            <S.MenuPannelContainer>
+                 <S.MenuPannel onClick={()=>clickHandler('signin')} active={clickMenu==='signin'||false}>Sign In</S.MenuPannel>
+                      <span>or</span>
                 <S.MenuPannel onClick={()=>clickHandler('signup')} active={clickMenu==='signup'||false}>Sign Up</S.MenuPannel>
-            </S.BodyPannel>
+            </S.MenuPannelContainer>
+            <S.BodyPannel>
+                  {clickMenu==='signin'?<SingIn />: <SingUp />}
+                </S.BodyPannel>
         </S.PannelContainer>
     )
 }
