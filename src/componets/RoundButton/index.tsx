@@ -10,9 +10,8 @@ type props={
 export const RoundButton=({children,round,theme}:props)=>{
 
     return(
-        <S.ButtonContainer>
+       
             <S.ButtonFourConners round={round} theme={theme}>{children} </S.ButtonFourConners>
-        </S.ButtonContainer>
     )
 }
 

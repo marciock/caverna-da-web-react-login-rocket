@@ -8,10 +8,13 @@ export const Colors={
     
     },
     gray:{
-        dark:'#546274',
+        dark:'#222E3F',
         light:'#939CA8',
+        middle:'#546173',
         background1:'#384A62',
-        background2:'#222E3F'
+        background2:'#222E3F',
+        background:'#222E3F',
+        shadow:'rgba(60,12,24,0.4)'
     },
     red:{
         background:'#C56276',
