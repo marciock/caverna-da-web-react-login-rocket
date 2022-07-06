@@ -21,7 +21,6 @@ export const SliderRocket=({content}:ISliderContent)=>{
       setTimeout( ()=>{
             setIndexSliderHandler()         
        },5000)
-       console.log(index)
        
     })
 

@@ -22,12 +22,9 @@ export const LoginRightPannel=()=>{
         <S.PannelContainer>
             <S.HeaderPannel>
               <S.MenuButtonsContainer>
-                <div onClick={()=>clickHandler('signin')}>
-                    <RoundButton round="left"  theme={clickMenu==='signin'?theme.Colors.green:theme.Colors.gray} >Sign IN</RoundButton>
-                </div>
-                <div onClick={()=>clickHandler('signup')}>
-                     <RoundButton round="right"  theme={clickMenu==='signup'?theme.Colors.green:theme.Colors.gray} >Sign IN</RoundButton>
-                </div>
+                    <RoundButton  onClick={()=>clickHandler('signin')} type="button" round="left"  theme={clickMenu==='signin'?theme.Colors.green:theme.Colors.gray} >Sign IN</RoundButton>
+                     <RoundButton onClick={()=>clickHandler('signup')} type="button"  round="right"  theme={clickMenu==='signup'?theme.Colors.green:theme.Colors.gray} >Sign IN</RoundButton>
+                
               </S.MenuButtonsContainer>
             </S.HeaderPannel>
             <S.MenuPannelContainer>

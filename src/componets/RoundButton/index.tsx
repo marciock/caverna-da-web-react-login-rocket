@@ -1,17 +1,38 @@
-import React from 'react'
-import * as S from './RoundButton.styled'
-import {IThemeColor} from './RoundButton.interface'
+import styled from "styled-components";
 
-type props={
-    children:string,
-    round:'left' | 'right' | 'all',
-    theme:IThemeColor
-}
-export const RoundButton=({children,round,theme}:props)=>{
+import { IButtonStyledProps } from "./RoundButton.interface";
 
-    return(
-       
-            <S.ButtonFourConners round={round} theme={theme}>{children} </S.ButtonFourConners>
-    )
-}
+const borderOptions = {
+  left: "10rem 0  0 10rem",
+  right: "0 10rem 10rem 0",
+  all: "10rem",
+};
 
+export const RoundButton = styled.button<IButtonStyledProps>`
+  border: 0;
+  background-image: linear-gradient(
+    ${(props) => props.theme.middle},
+    ${(props) => props.theme.dark}
+  );
+  color: ${(props) => props.theme.light};
+  border-radius: ${(props) => borderOptions[props.round]};
+  font-size: 0.75rem;
+  font-weight: 300;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px ${(props) => props.theme.shadow};
+  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+  width: 100%;
+
+  :hover {
+    background-image: linear-gradient(
+      ${(props) => props.theme.dark},
+      ${(props) => props.theme.middle}
+    );
+  }
+
+  :active {
+    box-shadow: -1px 1px 5px ${(props) => props.theme.shadow};
+    background-color: ${(props) => props.theme.middle};
+    color: ${(props) => props.theme.dark};
+  }
+`;
